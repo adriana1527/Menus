@@ -3,7 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Menu Fixado </title>
+    <title> Menu e Submenu  </title>
+    <style>
+        .menu{
+            list-style:none; 
+            float:left;
+            padding : 0px 20px 0px 5px;
+            line-heigh: 1.5;
+            font-family : helvetica; 
+            display:inline;
+        }
+
+        .menu li{
+            position: relative;
+            float : left;
+        }
+
+        .menu li ul {
+            position: absolute;
+            top: 25px;
+            background-color: aquamarine;
+            display: none;
+        }
+
+        .menu li a{
+            color: brown;
+            text-decoration: none;
+            padding: 5px 30px;
+            display: block
+        }
+
+        .menu li a:hover{
+            background-color: blueviolet;
+            color : #fff;
+        }
+
+        .menu li:hover ul,
+        .menu li.over ul{
+            display : block
+        }
+
+        .menu li ul li{
+            border : 1px solid #c0c0c0;
+            display : block;
+            width : 200px;
+        }
+    </style>
 
 </head>
 <body>
@@ -11,14 +56,15 @@
         <ul class="menu">
             <li> <a href="#"> home </a> </li>
             <li> <a href="#"> sobre</a> </li>
-            <li> <a href="#"> o que fazemos</a> </li>
-            <ul>
-                <li> <a href="#"> web design</a> </li>
-                <li> <a href="#"> seo</a> </li>
-                <li> <a href="#"> design</a></li>
-            </ul>
+            <li> <a href="#"> o que fazemos</a>
+                <ul>
+                    <li> <a href="#"> web design</a> </li>
+                    <li> <a href="#"> seo</a> </li>
+                    <li> <a href="#"> design</a></li>
+                </ul>
+            </li>
             <li> <a href="#"> links</a></li>
-            <li> <a href="#"></a>contatos</li>
+            <li> <a href="#"> contatos </a></li>
         </ul>
     </nav>
 </body>
